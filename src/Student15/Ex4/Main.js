@@ -14,8 +14,8 @@ export const Main = () => {
        <div class="header"> Toltal Likes: {counter}</div>
        <Tweets 
        clickHandler = {clickHandler}/>
-       
 
     </div>
   )
+  
   }

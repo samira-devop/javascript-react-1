@@ -11,6 +11,8 @@ body {
 
 .logo {
     background-color: burlywood;
+    font-weight: bolder;
+    font-size: larger;
 }
 
 .Nav {

@@ -1,11 +1,14 @@
 import React from "react";
+import { useState } from "react";
 
- export const Clicker = ({onClicked}) => {
-    
-    
+const Account = () => {
+  const [isShown, setShow] = useState(false);
+  const clickHandler = () => {
+    setShow(!isShown);
+  };
   return (
     <div className="table">
-      <th>Account Information</th>
+      <h3>Account Information</h3>
       <tr>
         <td>Balance</td>
         <td>$100,000</td>
@@ -15,14 +18,16 @@ import React from "react";
         <td>%5.0</td>
       </tr>
       <tr>
-        <td>Account Number 11-1234</td>
+        <td>Account Number {isShown ? <span>11-1234</span> : null}</td>
         <td>
-            <button onClick={() =>
-            onClicked("Show")}>Show</button>
+          <div>
+            <button onClick={() => clickHandler()}>
+              {isShown ? "Hide" : "Show"}
+            </button>
+          </div>
         </td>
       </tr>
     </div>
-  )
-            
-}
-
+  );
+};
+export default Account;
